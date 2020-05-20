@@ -1,0 +1,41 @@
+<html>
+    <style>
+        body {
+          background-image: url('assets/table.jpg');
+        }
+        </style>
+    <head>
+        <title>BlackJack</title>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <link rel='icon' href='assets/favicon.ico' type='image/x-icon' >
+    </head>
+    <body>
+        <h1 align=center>{{.PageTitle}}</h1>
+        <ul>
+            {{range .Options}}
+                <a href="/{{.Title}}" class="button">{{.Title}}</a>
+            {{end}}
+        </ul>
+        <h3 class=message>{{.Message}}</h3>
+        <h2 align=center>User's Cards</h2>
+        <div align=center> 
+            <h2  align=center>
+                {{range $card := .UserCards}}
+                    <img src = {{$card}} />
+                {{end}}
+        </div>
+        <h2 align=center>Dealer's Cards</h2>
+        <div align=center> 
+            <h2  align=center>
+                {{range $card := .DealerCards}}
+                    <img src = {{$card}} />
+                {{end}}
+        </div>
+        <ul class=totals>
+            <li class=totals>Win Count: {{.WinCount}}</li>
+            <li class=totals>Loss Count: {{.LossCount}}</li>
+            <li class=totals>User Hand: {{.UserHand}}</li>
+            <li class=totals>Dealer Hand: {{.DealerHand}}</li>
+        </ul>
+    </body>
+</html>
