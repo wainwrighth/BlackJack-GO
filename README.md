@@ -22,6 +22,5 @@ This is the main page for the BlackJack game displaying the gaming options to th
 
 ## Notes
 
-- All endpoints specified in the google doc are accessible through their respective endpoints, some just won't display information to the user because the format the page is at doesn't cause there to be a need (example: localhost:80/show)
 - After picking to stay, the dealer will hit only if they are under to 17 becuase only then is it in their favor to do so. After the dealer is finished the final result is decided. In the event the user and dealer tie, the user is awarded a win
 - The color of the top buttons is in fact rebeccapurple
